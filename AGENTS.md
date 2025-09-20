@@ -17,7 +17,7 @@
 ### Core Framework
 
 - **Framework:** Ruby on Rails 8.0.0 (Edge)
-- **Language:** Ruby 3.4.4
+- **Language:** Ruby 3.4.5
 - **Database:** PostgreSQL (Primary, SolidQueue, SolidCache, SolidCable), Redis (Dev ActionCable)
 - **Web Server:** Puma
 

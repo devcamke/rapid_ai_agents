@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.3.4"
+ruby "3.4.5"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
@@ -9,8 +9,8 @@ gem "rails", "~> 8.0.2"
 gem "propshaft"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 2.7"
-
+#gem "sqlite3", "~> 2.7"
+gem "pg" # Use PostgreSQL as the database for Active Record
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 6.6"
 
@@ -34,7 +34,7 @@ gem "solid_cable"
 # gem "kredis"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -47,7 +47,7 @@ gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "rspec-rails"
   gem "dotenv-rails"
 end
@@ -95,3 +95,12 @@ gem "dry-operation"
 # Exception tracking
 gem "exception_notification"
 gem "slack-notifier"
+
+gem "validates_timeliness", "~> 8.0"
+gem "kaminari", "~> 1.2"
+gem "prawn", "~> 2.5"
+gem "prawn-table", "~> 0.2.2"
+gem "caxlsx", "~> 4.4"
+gem "caxlsx_rails", "~> 0.6.4"
+gem "chartkick", "~> 5.2"
+gem "groupdate", "~> 6.7"
